@@ -15,13 +15,16 @@ function showTime() {
   // Figure out if it's AM or PM and set
   const amPm = hour >= 12 ? 'PM' : 'AM';
 
+  // Options
+  const showAmPm = true;
+
   // 12-Hour Format
   hour = hour % 12 || 12;
 
   // Output Time
   time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(
     sec
-  )}`;
+  )} ${showAmPm ? amPm : ''}`;
 
   setTimeout(showTime, 1000);
 }
@@ -44,11 +47,12 @@ function setBgGreet() {
     // Afternoon
     document.body.style.backgroundImage = "url('../img/afternoon.jpg')";
     greeting.textContent = 'Good Afternoon';
+    document.body.style.color = '#FFFFFA';
   } else {
     // Evening
     document.body.style.backgroundImage = "url('../img/night.jpg')";
     greeting.textContent = 'Good Evening';
-    document.body.style.color = 'white';
+    document.body.style.color = '#FFFFFA';
   }
 }
 
