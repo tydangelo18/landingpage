@@ -5,30 +5,49 @@
 }
 
 body {
-  /* font-family: 'Quicksand', sans-serif; */
-  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   height: 100vh;
-  color: black;
   background-size: cover;
 }
 
 #time {
   font-size: 8rem;
+  font-family: 'Work Sans';
+  font-weight: 400;
 }
 
 h1 {
   margin-bottom: 3rem;
+  font-family: 'Work Sans';
+  font-weight: 400;
 }
 
 h2 {
   margin-bottom: 0.5rem;
   opacity: 0.75;
-  font-family: 'Lora', serif;
+  font-family: 'Work Sans';
+  font-weight: 300;
+}
+
+/* Parent Icon Container */
+.flexcontainer {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+/* Child Icon Containers */
+.innerbox {
+  display: flex;
+  flex: 1 0 33%;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 @media (max-width: 700px) {
