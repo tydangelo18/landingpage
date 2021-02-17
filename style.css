@@ -20,14 +20,14 @@ body {
 }
 
 h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   font-family: 'Work Sans';
   font-weight: 400;
 }
 
 h2 {
   margin-bottom: 0.5rem;
-  opacity: 0.75;
+  opacity: 0.87;
   font-family: 'Work Sans';
   font-weight: 300;
 }
@@ -37,6 +37,8 @@ h2 {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  max-width: 200px;
+  margin-bottom: 1rem;
 }
 
 /* Child Icon Containers */
