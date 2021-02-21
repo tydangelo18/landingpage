@@ -16,7 +16,11 @@
 ## Preview
  
  - Morning Page
- <img width="1245" alt="Screen Shot 2021-02-18 at 9 38 05 AM" src="https://user-images.githubusercontent.com/60044459/108381156-294bcd00-71cd-11eb-8d16-e48b7f27e3ef.png">
+ 
+ - Afternoon Page
+<img width="1271" alt="Screen Shot 2021-02-21 at 2 56 17 PM" src="https://user-images.githubusercontent.com/60044459/108638486-1814f180-7455-11eb-81fe-41d685199457.png">
+
+ - Evening Page
 
 ## Live Link
 

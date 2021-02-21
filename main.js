@@ -82,6 +82,69 @@ function setFocus(e) {
 focus.addEventListener('keypress', setFocus);
 focus.addEventListener('blur', setFocus);
 
+// Display weather
+function getWeather() {
+  // DOM Elements
+  let temperature = document.getElementById('temperature');
+  let location = document.getElementById('location');
+  let icon = document.getElementById('icon');
+
+  // Define API key for API call
+  let api = 'https://api.openweathermap.org/data/2.5/weather';
+  let apiKey = 'f146799a557e8ab658304c1b30cc3cfd';
+
+  // DOM element to display 'locating...' before user authorizes location access
+  location.innerHTML = 'Locating...';
+
+  // Geolocation Web API call
+  navigator.geolocation.getCurrentPosition(success, error);
+
+  // Geolocation on success (User approves location access)
+  function success(position) {
+    // Define location that geolocator gives
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
+
+    // Define URL to put into fetch API call
+    let url =
+      api +
+      '?lat=' +
+      latitude +
+      '&lon=' +
+      longitude +
+      '&appid=' +
+      apiKey +
+      '&units=imperial';
+
+    // Fetch API call
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        // Temperature data
+        let temp = data.main.temp;
+        // Icon data
+        let iconName = data.weather[0].icon;
+        // icon 'src' url
+        let iconUrl = `http://openweathermap.org/img/wn/${iconName}.png`;
+        // Add temperature to the header tag with id='temperature' 
+        temperature.innerHTML = Math.round(temp) + '° F';
+        // Add city to the header tag with id='location' 
+        location.innerHTML = data.name;
+        // Add src to the <img> tag with id='icon'
+        icon.src = iconUrl;
+      });
+  }
+
+  // Geolocation on error (User denies location access)
+  function error() {
+    location.innerHTML = 'Unable to retrieve your location';
+  }
+}
+
+// Get Weather Call
+getWeather();
+
 // Run Clock
 showTime();
 
