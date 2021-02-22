@@ -57,6 +57,38 @@ function setBgGreet() {
   }
 }
 
+// Set Current Day
+function getDay() {
+  // DOM Elements
+  let todayDate = document.getElementById('todayDate');
+  // Month
+  const monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  let today = new Date(),
+    month = monthNames[today.getMonth()];
+  console.log(month);
+  // Day
+  let day = today.getDate();
+  console.log(day);
+  // Year
+  let year = today.getFullYear();
+  console.log(year);
+
+  todayDate.innerHTML = month + ' ' + day + ', ' + year;
+}
+
 // Get Focus
 function getFocus() {
   if (localStorage.getItem('focus') === null) {
@@ -127,9 +159,9 @@ function getWeather() {
         let iconName = data.weather[0].icon;
         // icon 'src' url
         let iconUrl = `http://openweathermap.org/img/wn/${iconName}.png`;
-        // Add temperature to the header tag with id='temperature' 
+        // Add temperature to the header tag with id='temperature'
         temperature.innerHTML = Math.round(temp) + '° F';
-        // Add city to the header tag with id='location' 
+        // Add city to the header tag with id='location'
         location.innerHTML = data.name;
         // Add src to the <img> tag with id='icon'
         icon.src = iconUrl;
@@ -150,6 +182,9 @@ showTime();
 
 // Set Background and Greeting
 setBgGreet();
+
+// Set Current Day
+getDay();
 
 // Get Focus from Local Storage
 getFocus();
