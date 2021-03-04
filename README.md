@@ -15,12 +15,13 @@
 ## Preview
 
 Morning Page
+<img width="1278" alt="Screen Shot 2021-02-26 at 8 43 53 AM" src="https://user-images.githubusercontent.com/60044459/109897317-24206080-7c58-11eb-8676-864cd7a21641.png">
 
 Afternoon Page
-  <img width="1271" alt="Screen Shot 2021-02-21 at 2 56 17 PM" src="https://user-images.githubusercontent.com/60044459/108638486-1814f180-7455-11eb-81fe-41d685199457.png">
+<img width="1275" alt="Screen Shot 2021-02-23 at 12 41 19 PM" src="https://user-images.githubusercontent.com/60044459/109897350-326e7c80-7c58-11eb-8428-0cf4771582e2.png">  
 
 Evening Page
-  <img width="1264" alt="Screen Shot 2021-02-21 at 10 36 16 PM" src="https://user-images.githubusercontent.com/60044459/108663065-4adeda00-7495-11eb-9cf6-83d8f2dd3b21.png">
+<img width="1277" alt="Screen Shot 2021-02-22 at 8 57 06 PM" src="https://user-images.githubusercontent.com/60044459/109897392-40240200-7c58-11eb-8a40-bc08250d7da9.png">  
 
 ## Live Link
 
